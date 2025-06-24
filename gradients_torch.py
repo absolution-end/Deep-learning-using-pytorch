@@ -1,12 +1,12 @@
-import numpy as np
+import torch
 
 #^y = w*x
 
-#^y = 2*x
-x = np.array([1,2,3,4],dtype=float)
-y = np.array([2,4,6,8],dtype=float)
+#^y = 2*x``
+x = torch.tensor([1,2,3,4],dtype=float)
+y = torch.tensor([2,4,6,8],dtype=float)
 
-w = 0.0 
+w = torch.tensor(0.0, dtype=torch.float32, requires_grad=True)
 
 #model prediction
 def forward(x):
@@ -19,9 +19,6 @@ def loss(y, y_predicted):
 #gradient
 # MSE =1/N * (w*x - y)**2
 # dj/dw =1/N *2*(w*x-y)*x
-
-def gradient(x, y, y_predicted):
-    return np.dot(2*x, (y_predicted - y)).mean()
 
 print(f"Prediction before training: {forward(5):.3f}")
 
@@ -36,14 +33,15 @@ for epoch in range(n_iterations):
     #loss
     l = loss(y,y_pred)
     
-    #gradient
-    dw = gradient(x, y, y_pred)
+    #gradient = backward pass
+    l.backward()  # computes the gradient of the loss w.r.t. w
     
     #update weights
+    with torch.no_grad(): # using no grad context to avoid tracking history
+        w -= learning_rate * w.grad
     
-    w -= learning_rate * dw
-    
+    # zero gradients
+    w.grad.zero_()   # reset gradients to zero before the next iteration
     if epoch % 1 == 0:
         print(f"Epoch {epoch+1}: w = {w:.3f}, loss = {l:.8f}")
 print(f"Prediction after training: f(5) {forward(5):.3f}")
-
