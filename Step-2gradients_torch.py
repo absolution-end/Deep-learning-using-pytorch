@@ -20,7 +20,7 @@ def loss(y, y_predicted):
 # MSE =1/N * (w*x - y)**2
 # dj/dw =1/N *2*(w*x-y)*x
 
-print(f"Prediction before training: {forward(5):.3f}")
+print(f"Prediction before training: {forward(4.0):.3f}")
 
 #training 
 learning_rate = 0.01
@@ -44,4 +44,4 @@ for epoch in range(n_iterations):
     w.grad.zero_()   # reset gradients to zero before the next iteration
     if epoch % 1 == 0:
         print(f"Epoch {epoch+1}: w = {w:.3f}, loss = {l:.8f}")
-print(f"Prediction after training: f(5) {forward(5):.3f}")
+print(f"Prediction after training: f(5) {forward(4.0):.3f}")
