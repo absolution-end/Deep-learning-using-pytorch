@@ -26,9 +26,24 @@ class Winedataset(Dataset):
         return sample
     def __len__(self):
         return self.n_samples
-    
+
+class MUltransform:
+    def __init__(self,factor):
+        self.factor = factor
+        
+    def __call__(self, sample):
+        input , target = sample
+        input *= self.factor
+        return input , target
+            
 dataset = Winedataset(transform=Tensor())
 
+firstd = dataset[0]
+item, label = firstd
+print(type(item) , type(label))
+
+composed = torchvision.transforms.Compose([Tensor(), MUltransform(3)])
+dataset = Winedataset(transform=composed)
 firstd = dataset[0]
 item, label = firstd
 print(type(item) , type(label))
