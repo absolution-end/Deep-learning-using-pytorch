@@ -36,7 +36,7 @@ class MUltransform:
         input *= self.factor
         return input , target
             
-dataset = Winedataset(transform=Tensor())
+dataset = Winedataset(transform=None)
 
 firstd = dataset[0]
 item, label = firstd
