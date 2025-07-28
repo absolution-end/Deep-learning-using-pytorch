@@ -38,6 +38,7 @@ samples, labels = next(example)
 print(samples.shape , labels.shape)
 
 for i in range(6):
+    # first argument 2 is number of rows and "3" number of columns and third argumnet (i+1) is the index of the current subplot
     plt.subplot(2,3,i+1)
     plt.imshow(samples[i][0], cmap='gray')
 plt.show()
@@ -66,7 +67,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=.001)
 n_total_steps = len(train_loader)
 for epoch in range(num_epoch):
     for i,(image, labels) in enumerate(train_loader):
-        
+        # here we flatten the image
         image = image.reshape(-1, 28*28).to(device)
         labels = labels.to(device)
         
