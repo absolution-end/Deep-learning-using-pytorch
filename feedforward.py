@@ -68,10 +68,11 @@ n_total_steps = len(train_loader)
 for epoch in range(num_epoch):
     for i,(image, labels) in enumerate(train_loader):
         # here we flatten the image
+        
         image = image.reshape(-1, 28*28).to(device)
         labels = labels.to(device)
         
-        # Foeward
+        # Forward
         output = model(image)
         loss = criterion(output, labels)
         
