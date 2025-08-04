@@ -23,7 +23,7 @@ print(device)
 # Hyperparameter
 input_size = 800
 hidden_size = 100
-num_epoch = 4
+num_epoch = 10
 num_classes = 10
 batch_size = 4
 learning_rate = 0.001
