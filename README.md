@@ -1,54 +1,5 @@
 # Deep-learning-using-pytorch
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>PyTorch Tutorials by Patrick Loeber</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    h1, h2 {
-      color: #cc0000;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1em;
-    }
-    th, td {
-      padding: 10px;
-      border: 1px solid #ccc;
-      text-align: left;
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {
-      margin-bottom: 5px;
-    }
-    ul li::before {
-      content: "✅";
-      margin-right: 8px;
-      color: green;
-    }
-    a {
-      color: #1a0dab;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
-<body>
-
   <h1>🧠 PyTorch Tutorials by Patrick Loeber</h1>
   <p>This is a curated list of PyTorch tutorials I’ve followed, created by <strong>Patrick Loeber (aka pythonengineer)</strong>. It’s an excellent, hands-on series for learning PyTorch from the ground up.</p>
 
@@ -112,3 +63,4 @@
 
 </body>
 </html>
+
