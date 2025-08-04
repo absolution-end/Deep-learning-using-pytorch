@@ -1,6 +1,6 @@
 # Deep-learning-using-pytorch
 
-  <h1>🧠 PyTorch Tutorials by Patrick Loeber</h1>
+  <h1>🧠 PyTorch Tutorials</h1>
   <p>This is a curated list of PyTorch tutorials I’ve followed, created by <strong>Patrick Loeber (aka pythonengineer)</strong>. It’s an excellent, hands-on series for learning PyTorch from the ground up.</p>
 
   <h2>📚 Tutorial List</h2>
@@ -63,4 +63,5 @@
 
 </body>
 </html>
+
 
