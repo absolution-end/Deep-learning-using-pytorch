@@ -118,8 +118,8 @@ with torch.no_grad():
                 
                 # max returns (value, index)
                 _, predictions = torch.max(output,1)
-                n_samples = labels.size(0)
                 n_correct = (predictions==labels).sum().item()
+                n_samples = labels.size(0)
                 
                 for i in range(batch_size):
                         label= labels[i]
